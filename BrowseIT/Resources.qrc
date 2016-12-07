@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>btns and icns/back.png</file>
+        <file>btns and icns/back-1.png</file>
+        <file>btns and icns/back-2.png</file>
+        <file>btns and icns/browsers.png</file>
+        <file>btns and icns/browsers-1.png</file>
+        <file>btns and icns/fast-forward.png</file>
+        <file>btns and icns/left-arrow.png</file>
+        <file>btns and icns/new-tab.png</file>
+        <file>btns and icns/next.png</file>
+        <file>btns and icns/next-1.png</file>
+        <file>btns and icns/next-2.png</file>
+        <file>btns and icns/previous.png</file>
+        <file>btns and icns/refresh.png</file>
+        <file>btns and icns/refresh-1.png</file>
+        <file>btns and icns/refresh-2.png</file>
+        <file>btns and icns/refresh-3.png</file>
+        <file>btns and icns/refresh-4.png</file>
+        <file>btns and icns/refresh-button.png</file>
+        <file>btns and icns/return.png</file>
+        <file>btns and icns/right-arrow.png</file>
+        <file>btns and icns/right-arrow-1.png</file>
+        <file>btns and icns/right-arrow-2.png</file>
+        <file>btns and icns/tabs.png</file>
+    </qresource>
+</RCC>

@@ -19,7 +19,6 @@
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,14 +28,14 @@ class Ui_TabLayout
 public:
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
+    QPushButton *pushButton;
     QLCDNumber *lcdNumber;
     QLineEdit *url;
-    QPushButton *reload;
     QPushButton *forward;
     QPushButton *back;
+    QPushButton *reload;
     QWebView *webView;
     QPushButton *Go;
-    QToolButton *Menu;
 
     void setupUi(QWidget *TabLayout)
     {
@@ -47,6 +46,15 @@ public:
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        pushButton = new QPushButton(TabLayout);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/btns and icns/tabs.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
+        pushButton->setFlat(true);
+
+        gridLayout->addWidget(pushButton, 1, 6, 1, 1);
+
         lcdNumber = new QLCDNumber(TabLayout);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
         lcdNumber->setFrameShape(QFrame::Panel);
@@ -60,24 +68,33 @@ public:
 
         gridLayout->addWidget(url, 1, 3, 1, 1);
 
-        reload = new QPushButton(TabLayout);
-        reload->setObjectName(QStringLiteral("reload"));
-        reload->setFlat(true);
-
-        gridLayout->addWidget(reload, 1, 1, 1, 1);
-
         forward = new QPushButton(TabLayout);
         forward->setObjectName(QStringLiteral("forward"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/btns and icns/next-1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        forward->setIcon(icon1);
         forward->setFlat(true);
 
         gridLayout->addWidget(forward, 1, 2, 1, 1);
 
         back = new QPushButton(TabLayout);
         back->setObjectName(QStringLiteral("back"));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/new/prefix1/btns and icns/back-1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        back->setIcon(icon2);
         back->setDefault(false);
         back->setFlat(true);
 
         gridLayout->addWidget(back, 1, 0, 1, 1);
+
+        reload = new QPushButton(TabLayout);
+        reload->setObjectName(QStringLiteral("reload"));
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/new/prefix1/btns and icns/refresh-2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        reload->setIcon(icon3);
+        reload->setFlat(true);
+
+        gridLayout->addWidget(reload, 1, 1, 1, 1);
 
         webView = new QWebView(TabLayout);
         webView->setObjectName(QStringLiteral("webView"));
@@ -85,21 +102,16 @@ public:
         webView->setAutoFillBackground(true);
         webView->setUrl(QUrl(QStringLiteral("about:blank")));
 
-        gridLayout->addWidget(webView, 2, 0, 1, 7);
+        gridLayout->addWidget(webView, 2, 0, 1, 9);
 
         Go = new QPushButton(TabLayout);
         Go->setObjectName(QStringLiteral("Go"));
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/new/prefix1/btns and icns/fast-forward.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Go->setIcon(icon4);
         Go->setFlat(true);
 
         gridLayout->addWidget(Go, 1, 5, 1, 1);
-
-        Menu = new QToolButton(TabLayout);
-        Menu->setObjectName(QStringLiteral("Menu"));
-        Menu->setPopupMode(QToolButton::MenuButtonPopup);
-        Menu->setAutoRaise(true);
-        Menu->setArrowType(Qt::DownArrow);
-
-        gridLayout->addWidget(Menu, 1, 6, 1, 1);
 
 
         gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
@@ -113,12 +125,12 @@ public:
     void retranslateUi(QWidget *TabLayout)
     {
         TabLayout->setWindowTitle(QApplication::translate("TabLayout", "Form", 0));
+        pushButton->setText(QString());
         url->setPlaceholderText(QApplication::translate("TabLayout", "Enter Website to start", 0));
-        reload->setText(QApplication::translate("TabLayout", "Refresh", 0));
-        forward->setText(QApplication::translate("TabLayout", "->", 0));
-        back->setText(QApplication::translate("TabLayout", "<-", 0));
-        Go->setText(QApplication::translate("TabLayout", "Go -->>", 0));
-        Menu->setText(QApplication::translate("TabLayout", "...", 0));
+        forward->setText(QString());
+        back->setText(QString());
+        reload->setText(QString());
+        Go->setText(QString());
     } // retranslateUi
 
 };

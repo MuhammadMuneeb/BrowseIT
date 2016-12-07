@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ToolBox</class>
+ <widget class="QToolBox" name="ToolBox">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ToolBox</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="lineWidth">
+   <number>1</number>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <property name="tabSpacing">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="page">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>559</width>
+     <height>357</height>
+    </rect>
+   </property>
+   <attribute name="label">
+    <string>Bookmarks</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="page">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>559</width>
+     <height>357</height>
+    </rect>
+   </property>
+   <attribute name="label">
+    <string>History</string>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

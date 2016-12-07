@@ -15,6 +15,38 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="Options">
+        <property name="text">
+         <string>Options</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Resources.qrc">
+          <normaloff>:/new/prefix1/btns and icns/tabs.png</normaloff>:/new/prefix1/btns and icns/tabs.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Add Tab</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Resources.qrc">
+          <normaloff>:/new/prefix1/btns and icns/new-tab.png</normaloff>:/new/prefix1/btns and icns/new-tab.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="tabPosition">
@@ -43,10 +75,64 @@
         <string>HomeTab</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="reload">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Refresh&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Resources.qrc">
+            <normaloff>:/new/prefix1/btns and icns/refresh-2.png</normaloff>:/new/prefix1/btns and icns/refresh-2.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="forward">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Forward&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Resources.qrc">
+            <normaloff>:/new/prefix1/btns and icns/next-1.png</normaloff>:/new/prefix1/btns and icns/next-1.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLCDNumber" name="lcdNumber">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load Progress&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QPushButton" name="back">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Back&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
           <property name="text">
-           <string>&lt;-</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Resources.qrc">
+            <normaloff>:/new/prefix1/btns and icns/back-1.png</normaloff>:/new/prefix1/btns and icns/back-1.png</iconset>
           </property>
           <property name="default">
            <bool>false</bool>
@@ -56,23 +142,18 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="reload">
-          <property name="text">
-           <string>Refresh</string>
+        <item row="2" column="0" colspan="9">
+         <widget class="QWebView" name="webView">
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
           </property>
-          <property name="flat">
+          <property name="autoFillBackground">
            <bool>true</bool>
           </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="forward">
-          <property name="text">
-           <string>-&gt;</string>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
+          <property name="url">
+           <url>
+            <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Landing Page/index.html</string>
+           </url>
           </property>
          </widget>
         </item>
@@ -87,68 +168,24 @@
          </widget>
         </item>
         <item row="0" column="4">
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="frameShape">
-           <enum>QFrame::Panel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Sunken</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="5">
          <widget class="QPushButton" name="Go">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Go!&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
           <property name="text">
-           <string>Go --&gt;&gt;</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="Resources.qrc">
+            <normaloff>:/new/prefix1/btns and icns/fast-forward.png</normaloff>:/new/prefix1/btns and icns/fast-forward.png</iconset>
           </property>
           <property name="flat">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item row="0" column="7">
-         <widget class="QToolButton" name="Menu">
-          <property name="text">
-           <string>...</string>
-          </property>
-          <property name="popupMode">
-           <enum>QToolButton::MenuButtonPopup</enum>
-          </property>
-          <property name="autoRaise">
-           <bool>true</bool>
-          </property>
-          <property name="arrowType">
-           <enum>Qt::DownArrow</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0" colspan="8">
-         <widget class="QWebView" name="webView">
-          <property name="layoutDirection">
-           <enum>Qt::RightToLeft</enum>
-          </property>
-          <property name="autoFillBackground">
-           <bool>true</bool>
-          </property>
-          <property name="url">
-           <url>
-            <string>about:blank</string>
-           </url>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>Add Tab</string>
-      </property>
-      <property name="flat">
-       <bool>true</bool>
-      </property>
      </widget>
     </item>
    </layout>
@@ -162,6 +199,8 @@
    <header>QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -15,6 +15,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLineEdit>
@@ -22,7 +23,6 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,18 +32,19 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *Options;
+    QPushButton *pushButton_2;
     QTabWidget *tabWidget;
     QWidget *tab;
     QGridLayout *gridLayout;
-    QPushButton *back;
     QPushButton *reload;
     QPushButton *forward;
-    QLineEdit *url;
     QLCDNumber *lcdNumber;
-    QPushButton *Go;
-    QToolButton *Menu;
+    QPushButton *back;
     QWebView *webView;
-    QPushButton *pushButton_2;
+    QLineEdit *url;
+    QPushButton *Go;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -55,6 +56,29 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         gridLayout_2 = new QGridLayout(centralwidget);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        Options = new QPushButton(centralwidget);
+        Options->setObjectName(QStringLiteral("Options"));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/btns and icns/tabs.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Options->setIcon(icon);
+        Options->setFlat(true);
+
+        horizontalLayout->addWidget(Options);
+
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/btns and icns/new-tab.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_2->setIcon(icon1);
+        pushButton_2->setFlat(true);
+
+        horizontalLayout->addWidget(pushButton_2);
+
+
+        gridLayout_2->addLayout(horizontalLayout, 0, 0, 1, 1);
+
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
         tabWidget->setTabPosition(QTabWidget::East);
@@ -66,24 +90,48 @@ public:
         tab->setObjectName(QStringLiteral("tab"));
         gridLayout = new QGridLayout(tab);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        back = new QPushButton(tab);
-        back->setObjectName(QStringLiteral("back"));
-        back->setDefault(false);
-        back->setFlat(true);
-
-        gridLayout->addWidget(back, 0, 0, 1, 1);
-
         reload = new QPushButton(tab);
         reload->setObjectName(QStringLiteral("reload"));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/new/prefix1/btns and icns/refresh-2.png"), QSize(), QIcon::Normal, QIcon::Off);
+        reload->setIcon(icon2);
         reload->setFlat(true);
 
         gridLayout->addWidget(reload, 0, 1, 1, 1);
 
         forward = new QPushButton(tab);
         forward->setObjectName(QStringLiteral("forward"));
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/new/prefix1/btns and icns/next-1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        forward->setIcon(icon3);
         forward->setFlat(true);
 
         gridLayout->addWidget(forward, 0, 2, 1, 1);
+
+        lcdNumber = new QLCDNumber(tab);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setFrameShape(QFrame::Panel);
+        lcdNumber->setFrameShadow(QFrame::Sunken);
+
+        gridLayout->addWidget(lcdNumber, 0, 5, 1, 1);
+
+        back = new QPushButton(tab);
+        back->setObjectName(QStringLiteral("back"));
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/new/prefix1/btns and icns/back-1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        back->setIcon(icon4);
+        back->setDefault(false);
+        back->setFlat(true);
+
+        gridLayout->addWidget(back, 0, 0, 1, 1);
+
+        webView = new QWebView(tab);
+        webView->setObjectName(QStringLiteral("webView"));
+        webView->setLayoutDirection(Qt::RightToLeft);
+        webView->setAutoFillBackground(true);
+        webView->setUrl(QUrl(QStringLiteral("file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Landing Page/index.html")));
+
+        gridLayout->addWidget(webView, 2, 0, 1, 9);
 
         url = new QLineEdit(tab);
         url->setObjectName(QStringLiteral("url"));
@@ -91,44 +139,18 @@ public:
 
         gridLayout->addWidget(url, 0, 3, 1, 1);
 
-        lcdNumber = new QLCDNumber(tab);
-        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
-        lcdNumber->setFrameShape(QFrame::Panel);
-        lcdNumber->setFrameShadow(QFrame::Sunken);
-
-        gridLayout->addWidget(lcdNumber, 0, 4, 1, 1);
-
         Go = new QPushButton(tab);
         Go->setObjectName(QStringLiteral("Go"));
+        QIcon icon5;
+        icon5.addFile(QStringLiteral(":/new/prefix1/btns and icns/fast-forward.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Go->setIcon(icon5);
         Go->setFlat(true);
 
-        gridLayout->addWidget(Go, 0, 5, 1, 1);
-
-        Menu = new QToolButton(tab);
-        Menu->setObjectName(QStringLiteral("Menu"));
-        Menu->setPopupMode(QToolButton::MenuButtonPopup);
-        Menu->setAutoRaise(true);
-        Menu->setArrowType(Qt::DownArrow);
-
-        gridLayout->addWidget(Menu, 0, 7, 1, 1);
-
-        webView = new QWebView(tab);
-        webView->setObjectName(QStringLiteral("webView"));
-        webView->setLayoutDirection(Qt::RightToLeft);
-        webView->setAutoFillBackground(true);
-        webView->setUrl(QUrl(QStringLiteral("about:blank")));
-
-        gridLayout->addWidget(webView, 1, 0, 1, 8);
+        gridLayout->addWidget(Go, 0, 4, 1, 1);
 
         tabWidget->addTab(tab, QString());
 
         gridLayout_2->addWidget(tabWidget, 1, 0, 1, 1);
-
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setFlat(true);
-
-        gridLayout_2->addWidget(pushButton_2, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -146,14 +168,29 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        back->setText(QApplication::translate("MainWindow", "<-", 0));
-        reload->setText(QApplication::translate("MainWindow", "Refresh", 0));
-        forward->setText(QApplication::translate("MainWindow", "->", 0));
-        url->setPlaceholderText(QApplication::translate("MainWindow", "Enter Website to start", 0));
-        Go->setText(QApplication::translate("MainWindow", "Go -->>", 0));
-        Menu->setText(QApplication::translate("MainWindow", "...", 0));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "HomeTab", 0));
+        Options->setText(QApplication::translate("MainWindow", "Options", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "Add Tab", 0));
+#ifndef QT_NO_WHATSTHIS
+        reload->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>Refresh</p></body></html>", 0));
+#endif // QT_NO_WHATSTHIS
+        reload->setText(QString());
+#ifndef QT_NO_WHATSTHIS
+        forward->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>Forward</p></body></html>", 0));
+#endif // QT_NO_WHATSTHIS
+        forward->setText(QString());
+#ifndef QT_NO_WHATSTHIS
+        lcdNumber->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>Load Progress</p></body></html>", 0));
+#endif // QT_NO_WHATSTHIS
+#ifndef QT_NO_WHATSTHIS
+        back->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>Back</p><p><br/></p></body></html>", 0));
+#endif // QT_NO_WHATSTHIS
+        back->setText(QString());
+        url->setPlaceholderText(QApplication::translate("MainWindow", "Enter Website to start", 0));
+#ifndef QT_NO_WHATSTHIS
+        Go->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>Go!</p><p><br/></p></body></html>", 0));
+#endif // QT_NO_WHATSTHIS
+        Go->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "HomeTab", 0));
     } // retranslateUi
 
 };

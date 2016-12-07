@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 #include <tablayout.h>
 #include <QMainWindow>
+#include <menu.h>
+#include <toolbox.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -33,6 +36,14 @@ private slots:
     void on_tabWidget_tabCloseRequested(int index);
 
     void on_pushButton_2_clicked();
+
+    void on_Menu_clicked();
+
+    void on_settings_clicked();
+
+    void on_Options_clicked();
+
+    void on_tabWidget_currentChanged(int index);
 
 private:
     Ui::MainWindow *ui;

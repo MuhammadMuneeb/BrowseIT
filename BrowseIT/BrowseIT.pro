@@ -8,15 +8,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     mainwindow.cpp \
-    tablayout.cpp
+    tablayout.cpp \
+    toolbox.cpp
 
 FORMS += \
     mainwindow.ui \
-    tablayout.ui
+    tablayout.ui \
+    toolbox.ui
 
 HEADERS += \
     mainwindow.h \
-    tablayout.h
+    tablayout.h \
+    toolbox.h
 
 RESOURCES += \
+    Resources.qrc
 
