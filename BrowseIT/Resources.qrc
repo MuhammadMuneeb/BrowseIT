@@ -23,5 +23,6 @@
         <file>btns and icns/right-arrow-1.png</file>
         <file>btns and icns/right-arrow-2.png</file>
         <file>btns and icns/tabs.png</file>
+        <file>btns and icns/bookmarks.png</file>
     </qresource>
 </RCC>

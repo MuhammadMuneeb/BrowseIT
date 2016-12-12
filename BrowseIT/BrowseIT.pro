@@ -9,7 +9,8 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     tablayout.cpp \
-    toolbox.cpp
+    toolbox.cpp \
+    bookmarks.cpp
 
 FORMS += \
     mainwindow.ui \
@@ -19,7 +20,8 @@ FORMS += \
 HEADERS += \
     mainwindow.h \
     tablayout.h \
-    toolbox.h
+    toolbox.h \
+    bookmarks.h
 
 RESOURCES += \
     Resources.qrc

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <bookmarks.h>
+
 
 /* Ye file MainWindow ki hai, yani jo program k start honey pey khulti hai. is mein sarey functions defined hain
 us window k jaisey buttons etc k wo kya krein gey or kab. is mein "Switches and Slots" use hotey hain.
@@ -88,3 +90,14 @@ void MainWindow::on_Options_clicked()
 {
     ui->tabWidget->addTab(new ToolBox(), "Options");
 }
+
+//Add Bookmark
+
+void MainWindow::on_AddBookmark_clicked()
+{
+    QString input= ui->url->text();
+    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.xml";
+    Bookmarks b;
+    b.write(filename, input);
+}
+

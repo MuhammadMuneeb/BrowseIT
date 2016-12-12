@@ -6,7 +6,9 @@
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv); //QApplication class ka contructor call kr k aik object bnaya
-    MainWindow w; //MainWindow, jo mainwindow.h ki wajah sey inlcude hai uska object bnaya
+    MainWindow w;
+//    w.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    //MainWindow, jo mainwindow.h ki wajah sey inlcude hai uska object bnaya
     w.setWindowTitle("BrowseIT"); //setWindowTitle yani jo bhi window baney gi uska title bnaya
     w.show(); //ye us window ko show krney k lye
 

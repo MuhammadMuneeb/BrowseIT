@@ -45,6 +45,12 @@ private slots:
 
     void on_tabWidget_currentChanged(int index);
 
+    void on_pushButton_clicked();
+
+    void on_AddBookmark_clicked();
+
+    void on_webView_urlChanged(const QUrl &arg1);
+
 private:
     Ui::MainWindow *ui;
 };
