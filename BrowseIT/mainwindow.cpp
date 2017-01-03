@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <bookmarks.h>
-
+#include <history.h>
 
 /* Ye file MainWindow ki hai, yani jo program k start honey pey khulti hai. is mein sarey functions defined hain
 us window k jaisey buttons etc k wo kya krein gey or kab. is mein "Switches and Slots" use hotey hain.
@@ -46,7 +46,15 @@ void MainWindow::on_reload_clicked()
 
 void MainWindow::on_Go_clicked()
 {
-    ui->webView->load(("http://"+ui->url->text())); //yahan pey jab user koi text dey ga to us k agey http laga k
+    ui->webView->load(("http://"+ui->url->text()));
+    QString input= ui->url->text();
+    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/history.xml";
+    history h;
+    h.history_write(filename, input);
+
+
+
+    //yahan pey jab user koi text dey ga to us k agey http laga k
     //load k function mein, url ka object mein jo input hoga usey text mein convert kr k webView, yani hamarey
     //web k loader mein send kr dey ga
 }
@@ -100,4 +108,17 @@ void MainWindow::on_AddBookmark_clicked()
     Bookmarks b;
     b.write(filename, input);
 }
+
+
+
+void MainWindow::on_webView_urlChanged(const QUrl &url)
+{
+    ui->url->setText(url.toString());
+    QString input= ui->url->text();
+    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/history.xml";
+    history h;
+    h.history_write(filename, input);
+
+}
+
 

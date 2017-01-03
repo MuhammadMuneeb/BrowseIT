@@ -20,7 +20,7 @@
    <number>1</number>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>1</number>
   </property>
   <property name="tabSpacing">
    <number>0</number>
@@ -37,6 +37,17 @@
    <attribute name="label">
     <string>Bookmarks</string>
    </attribute>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="source">
+       <url>
+        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.xml</string>
+       </url>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QWidget" name="page">
    <property name="geometry">
@@ -50,6 +61,17 @@
    <attribute name="label">
     <string>History</string>
    </attribute>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="source">
+       <url>
+        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/History.xml</string>
+       </url>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

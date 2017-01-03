@@ -10,7 +10,8 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     tablayout.cpp \
     toolbox.cpp \
-    bookmarks.cpp
+    bookmarks.cpp \
+    history.cpp
 
 FORMS += \
     mainwindow.ui \
@@ -21,7 +22,8 @@ HEADERS += \
     mainwindow.h \
     tablayout.h \
     toolbox.h \
-    bookmarks.h
+    bookmarks.h \
+    history.h
 
 RESOURCES += \
     Resources.qrc

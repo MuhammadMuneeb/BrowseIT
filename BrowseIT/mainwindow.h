@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <menu.h>
 #include <toolbox.h>
-
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -50,6 +50,10 @@ private slots:
     void on_AddBookmark_clicked();
 
     void on_webView_urlChanged(const QUrl &arg1);
+
+    void on_url_textChanged(const QString &arg1);
+
+    void on_webView_loadStarted();
 
 private:
     Ui::MainWindow *ui;
