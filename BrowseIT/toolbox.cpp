@@ -12,3 +12,4 @@ ToolBox::~ToolBox()
 {
     delete ui;
 }
+

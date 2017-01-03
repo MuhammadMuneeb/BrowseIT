@@ -55,6 +55,8 @@ private slots:
 
     void on_webView_loadStarted();
 
+    void on_webView_titleChanged(const QString &title);
+
 private:
     Ui::MainWindow *ui;
 };

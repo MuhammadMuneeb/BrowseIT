@@ -16,6 +16,9 @@ public:
     explicit ToolBox(QWidget *parent = 0);
     ~ToolBox();
 
+private slots:
+    void on_BookmarksDisplay_clicked();
+
 private:
     Ui::ToolBox *ui;
 };

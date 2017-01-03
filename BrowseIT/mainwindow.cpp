@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <bookmarks.h>
 #include <history.h>
+#include <QTableWidget>
+#include <tablayout.h>
 
 /* Ye file MainWindow ki hai, yani jo program k start honey pey khulti hai. is mein sarey functions defined hain
 us window k jaisey buttons etc k wo kya krein gey or kab. is mein "Switches and Slots" use hotey hain.
@@ -104,7 +106,7 @@ void MainWindow::on_Options_clicked()
 void MainWindow::on_AddBookmark_clicked()
 {
     QString input= ui->url->text();
-    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.xml";
+    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.html";
     Bookmarks b;
     b.write(filename, input);
 }
@@ -115,10 +117,17 @@ void MainWindow::on_webView_urlChanged(const QUrl &url)
 {
     ui->url->setText(url.toString());
     QString input= ui->url->text();
-    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/history.xml";
+    QString filename = "C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/history.html";
     history h;
     h.history_write(filename, input);
 
 }
 
 
+
+void MainWindow::on_webView_titleChanged(const QString &title)
+{
+
+    ui->tabWidget->setTabText(0, title);
+
+}

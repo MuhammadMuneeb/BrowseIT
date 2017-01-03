@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QTextStream>
 #include "bookmarks.h"
+#include <QTime>
 
 void Bookmarks::write(QString filename, QString input){
 
@@ -16,11 +17,7 @@ void Bookmarks::write(QString filename, QString input){
 
 
         QTextStream out(&file);
-        out<< "\n"<< input;
+        out<< "\n"<< input<<"  @  "<<QTime::currentTime().toString()<<"</br>";
         file.flush();
         file.close();
     }
-
-void Bookmarks::read(QString filename, QString input){
-
-}

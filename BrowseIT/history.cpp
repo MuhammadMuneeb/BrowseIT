@@ -4,6 +4,7 @@
 #include <QString>
 #include <QDebug>
 #include <QTextStream>
+#include <QTime>
 
 void history::history_write(QString filename, QString input)
 {
@@ -16,7 +17,7 @@ void history::history_write(QString filename, QString input)
 
 
     QTextStream out(&file);
-    out<< "\n"<< input;
+    out<< "\n"<< input<<"  @  "<<QTime::currentTime().toString()<<"</br>";
     file.flush();
     file.close();
 };

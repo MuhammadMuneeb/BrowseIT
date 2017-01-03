@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ToolBox</class>
  <widget class="QToolBox" name="ToolBox">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -39,10 +42,10 @@
    </attribute>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="source">
+     <widget class="QWebView" name="webView">
+      <property name="url">
        <url>
-        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.xml</string>
+        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/Bookmarks.html</string>
        </url>
       </property>
      </widget>
@@ -63,10 +66,10 @@
    </attribute>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <widget class="QTextBrowser" name="textBrowser_2">
-      <property name="source">
+     <widget class="QWebView" name="webView_2">
+      <property name="url">
        <url>
-        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/History.xml</string>
+        <string>file:///C:/Users/M.M.Haq/workspace/BrowseIT/BrowseIT/Files/History.html</string>
        </url>
       </property>
      </widget>
@@ -74,6 +77,13 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

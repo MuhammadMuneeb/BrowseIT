@@ -1,6 +1,6 @@
 #include "tablayout.h"
 #include "ui_tablayout.h"
-
+#include <mainwindow.h>
 TabLayout::TabLayout(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TabLayout)
@@ -52,4 +52,6 @@ void TabLayout::on_webView_loadProgress(int progress)
 //end basic nav menu operations
 
 //Options button
+
+
 
